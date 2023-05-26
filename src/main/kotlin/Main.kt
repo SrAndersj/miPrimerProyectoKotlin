@@ -71,6 +71,8 @@ fun main(args: Array<String>) {
     println(nombreDeOTraForma)
 
 
+    //slides de la clase Modificadores y tipos de datos en Kotlin
+    // https://static.platzi.com/media/public/uploads/slides-del-curso-de-kotlin-desde-cero_09493967-a482-460f-82ba-f422ff23bfe0.pdf
 
 
 
