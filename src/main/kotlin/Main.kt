@@ -80,7 +80,12 @@ fun main(args: Array<String>) {
     val claseDiez = "la clase Modificadores y tipos de datos en Kotlin fue con slides solamente , los slids estan en $link "
 
     println(claseDiez)
+    val linkOnce="https://platzi.com/clases/2245-kotlin/36593-operaciones-con-los-tipos-de-datos-en-kotlin/"
+    val claseOnce ="la clase 11 Operaciones con los tipos de datos en Kotlin  es una tabla con los peradores el link es $linkOnce "
 
+
+    println("-------------")
+    println(claseOnce)
 
 
 
