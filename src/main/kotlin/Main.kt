@@ -73,7 +73,13 @@ fun main(args: Array<String>) {
 
     //slides de la clase Modificadores y tipos de datos en Kotlin
     // https://static.platzi.com/media/public/uploads/slides-del-curso-de-kotlin-desde-cero_09493967-a482-460f-82ba-f422ff23bfe0.pdf
+    println("-------------")
 
+    val link="https://static.platzi.com/media/public/uploads/slides-del-curso-de-kotlin-desde-cero_09493967-a482-460f-82ba-f422ff23bfe0.pdf"
+
+    val claseDiez = "la clase Modificadores y tipos de datos en Kotlin fue con slides solamente , los slids estan en $link "
+
+    println(claseDiez)
 
 
 
