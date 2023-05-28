@@ -1,46 +1,31 @@
 fun main(args: Array<String>) {
-    val nombre ="Maria"
+    val nombreColor="Carmesi"
 
-    //  isNotEmpty nos ayuda a saber si el nombre esta vacio o no
-    if(nombre.isNotEmpty()) {
-    println("El Largo de nuestra variable nombre es ${nombre.length}")
-    }else{
-        println("Error la variable esta vacia ")
+
+    when(nombreColor){
+        "Amarillo"-> println("El Amarillo es el color de la alegria")
+        "Rojo","Carmesi"-> println("$nombreColor color del calor ")
+        else -> println("Error no tengo informacion del color")
     }
 
+    val code =200
+    //in significa un rango
+    when(code){
+        in 200..299 -> println("todo bien  el numero es $code")
+        in 400..500 -> print("error")
+        else -> println("codigo desconocido ")
 
-    //codigo en una sola linea
-    if(nombre.isNotEmpty()) println("El Largo de nuestra variable nombre es ${nombre.length}") else
-        println("Error la variable esta vacia ")
+    }
+
+    val tallaDeZapatos =41
+
+    val mensaje = when(tallaDeZapatos){
+
+        41,43 -> "Tenemos disponible "
+        42,44 -> "casi nos quedan "
 
 
-    var mensaje : String
-
-    if(nombre.length > 4) {
-
-        mensaje="tu nombre es largo "
-    }else {
-        mensaje="tu nombre es corto "
+        else -> "solo hay de 41 a 45"
     }
     println(mensaje)
-
-    //forma recomendada por kotlin--------------------
-
-
-
-    val nombreDos =""
-    val mensajeDos : String
-
-    mensajeDos = if(nombreDos.length > 4) {
-
-        "tu nombre es largoo "
-    }else if(nombreDos.isEmpty()){
-        "el Nombre esta vacio "
-    }
-    else {
-        "tu nombre es corto "
-    }
-    println(mensajeDos)
-
-
     }
