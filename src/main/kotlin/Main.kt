@@ -1,100 +1,46 @@
-
-const val PI=3.1416
-
 fun main(args: Array<String>) {
-    println("Hello World!")
+    val nombre ="Maria"
 
-    var dinero =10
-
-    println(dinero)
-
-    dinero =5
-
-    println(dinero)
-
-    val nombre = "Maria"  //val es una variable de solo lectura, no se puede editar
-
-    println(nombre)
-
-    println(PI)
-
-    val boolean = true
-
-    val numeroLargo:Long = 300000000000000
-
-    val numeroLargoDos = 3L
-
-    val double :Double =2.7182
-    val double2 =2.7182
-
-    val float : Float = 1.1f
-    val float2 = 1.1f
+    //  isNotEmpty nos ayuda a saber si el nombre esta vacio o no
+    if(nombre.isNotEmpty()) {
+    println("El Largo de nuestra variable nombre es ${nombre.length}")
+    }else{
+        println("Error la variable esta vacia ")
+    }
 
 
-    val primerValor =20
-
-    println("-------------")
-
-    println( primerValor.plus(30))
+    //codigo en una sola linea
+    if(nombre.isNotEmpty()) println("El Largo de nuestra variable nombre es ${nombre.length}") else
+        println("Error la variable esta vacia ")
 
 
-    val segundoValor=10
+    var mensaje : String
 
-    //si me paro en cima de minux y le doy contrl b voy a la declaracion de la funcion
+    if(nombre.length > 4) {
 
-    val tercerValor =primerValor.minus(segundoValor)
+        mensaje="tu nombre es largo "
+    }else {
+        mensaje="tu nombre es corto "
+    }
+    println(mensaje)
 
-    println(tercerValor)
-
-    println("-------------")
-
-    val cuartoValor =primerValor - segundoValor
-
-    println(cuartoValor)
-
-    println("-------------")
-
-    val apellidoo="APELLIDO"
-
-    val nombree="NOMBRE"
-
-    val nombreCompleto = nombree + " "+ apellidoo
-    println(nombreCompleto)
-    println("-------------")
-
-    val nombreCompletooo = "$nombree $apellidoo"
-
-    println(nombreCompletooo)
-
-    val nombreDeOTraForma = "Mi nombre es $nombree"
-
-    println(nombreDeOTraForma)
-
-
-    //slides de la clase Modificadores y tipos de datos en Kotlin
-    // https://static.platzi.com/media/public/uploads/slides-del-curso-de-kotlin-desde-cero_09493967-a482-460f-82ba-f422ff23bfe0.pdf
-    println("-------------")
-
-    val link="https://static.platzi.com/media/public/uploads/slides-del-curso-de-kotlin-desde-cero_09493967-a482-460f-82ba-f422ff23bfe0.pdf"
-
-    val claseDiez = "la clase Modificadores y tipos de datos en Kotlin fue con slides solamente , los slids estan en $link "
-
-    println(claseDiez)
-    val linkOnce="https://platzi.com/clases/2245-kotlin/36593-operaciones-con-los-tipos-de-datos-en-kotlin/"
-    val claseOnce ="la clase 11 Operaciones con los tipos de datos en Kotlin  es una tabla con los peradores el link es $linkOnce "
-
-
-    println("-------------")
-    println(claseOnce)
+    //forma recomendada por kotlin--------------------
 
 
 
+    val nombreDos =""
+    val mensajeDos : String
+
+    mensajeDos = if(nombreDos.length > 4) {
+
+        "tu nombre es largoo "
+    }else if(nombreDos.isEmpty()){
+        "el Nombre esta vacio "
+    }
+    else {
+        "tu nombre es corto "
+    }
+    println(mensajeDos)
 
 
-
-
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
-}
+    }
