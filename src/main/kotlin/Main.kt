@@ -1,19 +1,25 @@
 fun main(args: Array<String>) {
-    var contador =10
+    val listaDeFrutas = listOf("Manzana","pera","Frambuesa","Durazno")
 
-    while(contador > 0) {
-    println("El valor del contador es $contador")
-        contador--
+    for (fruta in listaDeFrutas){
+        println("hoy voy a comer $fruta")
     }
 
-    //do while primero ejecuta y luego compruba
-    do {
-        println("Generando un numero aleatorio")
-        val numeroAleatorio = (0..100).random()
-        println("el numero aleatorio es $numeroAleatorio")
+    println("--------------")
+    for (fruta in listaDeFrutas)println("hoy voy a comer $fruta")
 
+    println("--------------")
 
-    }while(numeroAleatorio > 50)
+    listaDeFrutas.forEach{fruta -> println("hoy si que voy a comer  $fruta") }
 
+    println("--------------")
 
+    val caracteresDeFrutas: List<Int> =listaDeFrutas.map{ fruta -> fruta.length}
+    println(caracteresDeFrutas)
+
+    println("--------------")
+
+    val listaFiltrada = caracteresDeFrutas.filter { longitud -> longitud > 5  }
+
+    println(listaFiltrada)
     }
