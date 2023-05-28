@@ -1,31 +1,19 @@
 fun main(args: Array<String>) {
-    val nombreColor="Carmesi"
+    var contador =10
 
-
-    when(nombreColor){
-        "Amarillo"-> println("El Amarillo es el color de la alegria")
-        "Rojo","Carmesi"-> println("$nombreColor color del calor ")
-        else -> println("Error no tengo informacion del color")
+    while(contador > 0) {
+    println("El valor del contador es $contador")
+        contador--
     }
 
-    val code =200
-    //in significa un rango
-    when(code){
-        in 200..299 -> println("todo bien  el numero es $code")
-        in 400..500 -> print("error")
-        else -> println("codigo desconocido ")
-
-    }
-
-    val tallaDeZapatos =41
-
-    val mensaje = when(tallaDeZapatos){
-
-        41,43 -> "Tenemos disponible "
-        42,44 -> "casi nos quedan "
+    //do while primero ejecuta y luego compruba
+    do {
+        println("Generando un numero aleatorio")
+        val numeroAleatorio = (0..100).random()
+        println("el numero aleatorio es $numeroAleatorio")
 
 
-        else -> "solo hay de 41 a 45"
-    }
-    println(mensaje)
+    }while(numeroAleatorio > 50)
+
+
     }
