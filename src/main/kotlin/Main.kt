@@ -1,25 +1,35 @@
 fun main(args: Array<String>) {
-    val listaDeFrutas = listOf("Manzana","pera","Frambuesa","Durazno")
+    //? significa que es nulable
+    var nombre: String? =null
 
-    for (fruta in listaDeFrutas){
-        println("hoy voy a comer $fruta")
+    // esto es lo que debemos evitar
+    //!! le estoy diciendo a kotlin que estoy 100% seguro que no es un valor nulo
+    // nombre!!.length
+
+
+    nombre?.length
+    println(nombre?.length)
+
+    println("-------------")
+
+    try {
+
+        nombre!!.length
+
+    }catch (exception : NullPointerException){
+        println("ha ocurrido un error")
+    }finally {
+        println("ha courrido un error cerrando aplicacion ")
     }
 
-    println("--------------")
-    for (fruta in listaDeFrutas)println("hoy voy a comer $fruta")
 
-    println("--------------")
+    val primerValor = 10
+    val segundoValor=0
 
-    listaDeFrutas.forEach{fruta -> println("hoy si que voy a comer  $fruta") }
+    val resultado : Int =try{primerValor/segundoValor}catch (exception:Exception){0}
+    println(resultado)
 
-    println("--------------")
-
-    val caracteresDeFrutas: List<Int> =listaDeFrutas.map{ fruta -> fruta.length}
-    println(caracteresDeFrutas)
-
-    println("--------------")
-
-    val listaFiltrada = caracteresDeFrutas.filter { longitud -> longitud > 5  }
-
-    println(listaFiltrada)
     }
+
+
+    //recomendacion evitar usar !!
