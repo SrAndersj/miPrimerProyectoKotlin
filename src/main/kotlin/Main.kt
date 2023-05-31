@@ -1,51 +1,48 @@
 fun main(args: Array<String>) {
 
-    val listaDeNombres = listOf("Juan","Enrique","Camila")
+    val numerosDeLoteria = listOf(11,22,43,56,78,66)
 
-    println(listaDeNombres)
+    println(numerosDeLoteria)
 
-    //lista mutable
+    //las ordena
+    val numerosSorted = numerosDeLoteria.sorted()
 
-    val listaVacia = mutableListOf<String>()
+    println(numerosSorted)
 
-    println(listaVacia)
+    val numerosDeLoteriaDescendientes =numerosDeLoteria.sortedDescending()
 
-    listaVacia.add("Andres")
+    println(numerosDeLoteriaDescendientes)
 
-    println(listaVacia)
+    println("----------")
+    val ordenarPorMultiplos =numerosDeLoteria.sortedBy { numero -> numero <50 }
 
+    println(ordenarPorMultiplos)
 
-    val valorUsandoGet=listaVacia.get(0)
+    val numerosAleatorios = numerosDeLoteria.shuffled()
 
-    println(valorUsandoGet)
+    println("----------")
 
-    val valorUsandoOperador= listaVacia[0]
-    println(valorUsandoOperador)
+    println(numerosAleatorios)
 
+    println("----------")
+    val numerosEnReversa = numerosDeLoteria.reversed()
 
-    val primerValor = listaDeNombres.first()
+    println(numerosEnReversa)
 
-    println(primerValor)
+        // convertir un elemento de un tipo a otro tipo
 
-    // val primerValor = listaDeNombres.firstOrNull()
+    val mensajesDeNumeros = numerosDeLoteria.map{numero ->
+            println(numero)
+        " tu numero de loteria es $numero"}
 
-    listaVacia.removeAt(0)
-
-    println(listaVacia)
-
-    listaVacia.add("Andres")
-
-    listaVacia.removeIf { caracteres -> caracteres.length > 3 }
-
-    println(listaVacia)
+    println(mensajesDeNumeros)
 
 
-    val array = arrayOf(1,2,3,4)
+    //funcion filter
 
-    println("nuestro array $array")
-    println("nuestro array como lista ${array.toList()}")
+    val numerosFiltrados =  numerosDeLoteria.filter { numero -> numero >50 }
 
-
+    println(numerosFiltrados)
     }
 
 
