@@ -1,24 +1,56 @@
+@file:Suppress("UNREACHABLE_CODE")
+
 fun main(args: Array<String>) {
 
-    val vocalesRepetidas= setOf("a","e","i","o","u","a","e","i","o","u")
+    val fraseAleatoria="En Platzi nunca paramos de aprender"
 
-    println(vocalesRepetidas)
+    imprimirFrase(fraseAleatoria)
 
-    val numerosFavoritos = mutableSetOf(1,2,3,4)
-    println(numerosFavoritos)
-    numerosFavoritos.add(5)
-    numerosFavoritos.add(5)
-    println(numerosFavoritos)
+    val fraseOrdenadaAleatoriamente = randomCase(fraseAleatoria)
 
-    numerosFavoritos.remove(5)
-    println(numerosFavoritos)
+    println(fraseOrdenadaAleatoriamente)
 
-    val valorDelSet =numerosFavoritos.first { numero -> numero > 2}
+    val fraseAleatoriaExtension ="En Platzi nunca paramos de aprender frase por extension".randomCaseExtension()
 
-    println(valorDelSet)
+    println(fraseAleatoriaExtension)
+}
+
+
+
+
+
+
+fun imprimirFrase(frase:String):Unit{
+
+    println("tu rase es : $frase")
+}
+
+fun randomCase(frase:String):String {
+
+    val numeroAleatorio = 0..99
+    val resultadoAleatorio = numeroAleatorio.random()
+    //rem es para devolver el residuo de la division del numero dividido 2
+    return if (resultadoAleatorio.rem(2) == 0) {
+        return frase.toUpperCase()
+
+    } else {
+        frase.toLowerCase()
+    }
 
 }
 
+    fun String.randomCaseExtension(): String {
+
+        val numeroAleatorioExtension = 0..99
+        val resultadoAleatorioExtension = numeroAleatorioExtension.random()
+        //rem es para devolver el residuo de la division del numero dividido 2
+        return if (resultadoAleatorioExtension.rem(2) == 0) {
+            return this.toUpperCase()
+
+        } else {
+            this.toLowerCase()
+        }
+    }
 
 
 
