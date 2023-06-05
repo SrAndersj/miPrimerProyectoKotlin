@@ -1,39 +1,21 @@
 fun main(args: Array<String>) {
 
-    val edadDeSuperHeroes = mapOf(
-        "Ironman" to 35,
-        "Spiderman" to 23,
-        "Capitan America" to 99
+    val vocalesRepetidas= setOf("a","e","i","o","u","a","e","i","o","u")
 
-    )
-    println(edadDeSuperHeroes)
+    println(vocalesRepetidas)
 
-    val edadSuperHeroesMutable = mutableMapOf(
-        "Ironman" to 35,
-        "Spiderman" to 23,
-        "Capitan America" to 99
+    val numerosFavoritos = mutableSetOf(1,2,3,4)
+    println(numerosFavoritos)
+    numerosFavoritos.add(5)
+    numerosFavoritos.add(5)
+    println(numerosFavoritos)
 
-    )
+    numerosFavoritos.remove(5)
+    println(numerosFavoritos)
 
-    println(edadSuperHeroesMutable)
+    val valorDelSet =numerosFavoritos.first { numero -> numero > 2}
 
-    edadSuperHeroesMutable.put("Thor",45)
-    edadSuperHeroesMutable["wolverin"] = 145
-    println(edadSuperHeroesMutable)
-
-    val edadIronman =edadSuperHeroesMutable["Ironman"]
-
-    println(edadIronman)
-
-    edadSuperHeroesMutable.remove("wolverin")
-    println(edadSuperHeroesMutable)
-
-    println(edadSuperHeroesMutable.keys)
-    println(edadSuperHeroesMutable.values)
-
-
-
-
+    println(valorDelSet)
 
 }
 
