@@ -1,18 +1,14 @@
 fun main(args: Array<String>) {
 
-    imprimirNombre(nombre="Giuseppe",apellido="Vetri")
+    val myLambda : (String) -> Int={valor -> valor.length }
+    val lambdaEjecutada:Int = myLambda("Hola Platzi")
+    println(lambdaEjecutada)
 
-
+    val saludos = listOf("Hello","hola","ciao")
+    val longitudSaludos = saludos.map(myLambda)
+    println(longitudSaludos)
 }
 
-fun imprimirNombre(nombre:String,segundoNombre:String="",apellido:String){
-
-    println("Mi nombre es $nombre y mi apellido es $apellido")
-
-    println("mi nombtre completo es $nombre $apellido")
-
-    println("mi nombtre completo es $nombre $segundoNombre $apellido")
-}
 
 
 
