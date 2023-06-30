@@ -1,14 +1,14 @@
 
 fun main(args: Array<String>) {
 
-    val colores = listOf("Azul","Amarillo","Rojo")
-    with(colores){
+    val moviles = mutableListOf("Google Pixel 2xl","Google Pixel 4a ","Huawei Redmi 9","xiaomi mi a3")
+        moviles.run {
+            removeIf{ movil -> movil.contains("Google")}
+        }
 
-        println("nuestros colores son $this")
-        println("Esta Lista tiene una cantidad de colores de $size ")
+    println(moviles)
 
 
-    }
 }
 
 
